@@ -1,4 +1,4 @@
-package com.example.androiddashplayer;
+package Player;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -95,3 +95,4 @@ public class PlayerActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
 }
+
