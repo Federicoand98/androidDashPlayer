@@ -21,6 +21,9 @@ public class PlayerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        System.out.println("Ciao");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
