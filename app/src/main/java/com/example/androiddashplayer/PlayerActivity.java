@@ -34,7 +34,7 @@ public class PlayerActivity extends AppCompatActivity {
         player = new SimpleExoPlayer.Builder(this).build();
         playerView.setPlayer(player);
 
-        MediaItem mediaItem = MediaItem.fromUri("http://www.bok.net/dash/tears_of_steel/cleartext/stream.mpd");
+        MediaItem mediaItem = MediaItem.fromUri("https://storage.googleapis.com/exoplayer-test-media-0/play.mp3");
         player.setMediaItem(mediaItem);
 
         player.setPlayWhenReady(playWhenReady);
