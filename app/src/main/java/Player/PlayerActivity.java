@@ -40,8 +40,6 @@ public class PlayerActivity extends AppCompatActivity {
     String videoURL = "http://www.bok.net/dash/tears_of_steel/cleartext/stream.mpd";
     String video = "https://media.geeksforgeeks.org/wp-content/uploads/20201217163353/Screenrecorder-2020-12-17-16-32-03-350.mp4";
 
-    https://github.com/google/ExoPlayer/blob/release-v2/demos/main/src/main/java/com/google/android/exoplayer2/demo/PlayerActivity.java
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +52,7 @@ public class PlayerActivity extends AppCompatActivity {
             DataSource.Factory dataSourceFactory = new DefaultHttpDataSourceFactory();
             //MediaSource mediaSource = new DashMediaSource.Factory(dataSourceFactory).createMediaSource(MediaItem.fromUri(Uri.parse(video)));
             ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
-            MediaSource mediaSource = new ExtractorMediaSource(Uri.parse(videoURL), dataSourceFactory, extractorsFactory, null, null);
+            MediaSource mediaSource = new ExtractorMediaSource(Uri.parse(video), dataSourceFactory, extractorsFactory, null, null);
 
             TrackSelection.Factory adaptiveTrackSelection = new AdaptiveTrackSelection.Factory();
             TrackSelector trackSelector = new DefaultTrackSelector(adaptiveTrackSelection);
