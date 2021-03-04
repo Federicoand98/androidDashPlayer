@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">androidDashPlayer</string>
-    <string name="dio">
-        MADONNA MAIALACCIA
-    </string>
+    <string name="dio"/>
+    <string name="mpd_prof">http://www.bok.net/dash/tears_of_steel/cleartext/stream.mpd</string>
+    <string name="mpd_test">http://www-itec.uni-klu.ac.at/ftp/datasets/mmsys12/Valkaama/MPDs/Valkaama_1s_act_isoffmain_DIS_23009_1_v_2_1c2_2011_08_30.mpd</string>
+    <string name="media_url_dash"><![CDATA[https://www.youtube.com/api/manifest/dash/id/bf5bb2419360daf1/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=51AF5F39AB0CEC3E5497CD9C900EBFEAECCCB5C7.8506521BFC350652163895D4C26DEE124209AA9E&key=ik0]]></string>
 </resources>
