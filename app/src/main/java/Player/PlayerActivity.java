@@ -51,9 +51,6 @@ public class PlayerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_player);
 
         exoPlayerView = findViewById(R.id.idExoPlayerVIew);
-
-        exoPlayer = ExoPlayerFactory.newSimpleInstance(this);
-
 /*
         try {
 
