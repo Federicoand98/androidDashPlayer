@@ -108,7 +108,7 @@ public class PlayerActivity extends AppCompatActivity {
 
         playerView.setPlayer(player);
         MediaItem mediaItem = new MediaItem.Builder()
-                .setUri(getString(R.string.mpd_test))
+                .setUri(getString(R.string.media_url_dash))
                 .setMimeType(MimeTypes.APPLICATION_MPD)
                 .build();
         player.setMediaItem(mediaItem);
