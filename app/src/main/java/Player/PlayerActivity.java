@@ -3,10 +3,12 @@ package Player;
 import android.annotation.SuppressLint;
 import android.media.MediaCodec;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.exoplayer2.DefaultLoadControl;
@@ -37,8 +39,13 @@ import com.google.android.exoplayer2.util.MimeTypes;
 import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.video.MediaCodecVideoRenderer;
 
+import org.dom4j.DocumentException;
+
+import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
+
+import Utils.TesterDownloader;
 
 public class PlayerActivity extends AppCompatActivity {
 
@@ -53,12 +60,24 @@ public class PlayerActivity extends AppCompatActivity {
     private int currentWindow = 0;
     private long playbackPosition = 0;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
         playerView = findViewById(R.id.idExoPlayerVIew);
+
+        TesterDownloader t = new TesterDownloader();
+
+        try {
+            t.get("audio");
+            t.get("video");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
 
         playbackStateListener = new PlaybackStateListener();
     }

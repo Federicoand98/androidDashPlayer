@@ -1,12 +1,12 @@
 package Network;
-/*
+
 import dash.mpd.IRepresentation;
 import dash.mpd.ISegment;
 
- */
+
 
 public class DataSegment {
-/*
+
     private ISegment segment;
     private IRepresentation representation;
     private int timescale;
@@ -66,6 +66,4 @@ public class DataSegment {
     public void setData(byte[] data) {
         this.data = data;
     }
-
- */
 }
