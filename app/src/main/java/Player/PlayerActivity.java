@@ -67,7 +67,7 @@ public class PlayerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_player);
 
         playerView = findViewById(R.id.idExoPlayerVIew);
-
+/*
         TesterDownloader t = new TesterDownloader();
 
         try {
@@ -78,6 +78,8 @@ public class PlayerActivity extends AppCompatActivity {
         } catch (DocumentException e) {
             e.printStackTrace();
         }
+
+ */
 
         playbackStateListener = new PlaybackStateListener();
     }
