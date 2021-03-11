@@ -18,6 +18,12 @@ import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.util.MimeTypes;
 import com.google.android.exoplayer2.util.Util;
 
+import org.dom4j.DocumentException;
+
+import java.io.IOException;
+
+import Application.Utils.TesterDownloader;
+
 public class PlayerActivity extends AppCompatActivity {
 
     String videoURL = "http://www.bok.net/dash/tears_of_steel/cleartext/stream.mpd";
@@ -38,19 +44,9 @@ public class PlayerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_player);
 
         playerView = findViewById(R.id.idExoPlayerVIew);
-/*
-        TesterDownloader t = new TesterDownloader();
 
-        try {
-            t.get("audio");
-            t.get("video");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        }
-
- */
+        TesterDownloader t = new TesterDownloader("audio");
+        TesterDownloader t2 = new TesterDownloader("video");
 
         playbackStateListener = new PlaybackStateListener();
     }
