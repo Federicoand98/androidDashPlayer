@@ -26,6 +26,10 @@ public class DataSegment {
         data = new byte[0];
     }
 
+    public int getSize() {
+        return data.length;
+    }
+
     public void alloc(int length) {
         data = new byte[length];
     }

@@ -3,6 +3,7 @@ package Application.Player;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import androidx.annotation.RequiresApi;
@@ -22,6 +23,7 @@ import org.dom4j.DocumentException;
 
 import java.io.IOException;
 
+import Application.Network.Downloader;
 import Application.Utils.TesterDownloader;
 
 public class PlayerActivity extends AppCompatActivity {
@@ -45,9 +47,15 @@ public class PlayerActivity extends AppCompatActivity {
 
         playerView = findViewById(R.id.idExoPlayerVIew);
 
+        Downloader downloader = new Downloader();
+        downloader.run();
+
+        Handler handler = new Handler();
+        handler.removeCallbacks(downloader);
+/*
         TesterDownloader t = new TesterDownloader("audio");
         TesterDownloader t2 = new TesterDownloader("video");
-
+*/
         playbackStateListener = new PlaybackStateListener();
     }
 

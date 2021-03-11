@@ -32,11 +32,11 @@ public class TesterDownloader {
                 try {
                     System.out.println("Inizio...");
 
-                    IMPD mpd = DASHManager.newDASHManager().open(
-                            "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd");
+                    IMPD mpd = DASHManager.newDASHManager().open("https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd");
                     IPeriod period = mpd.getPeriods().get(0);
 
                     if(av.equals("audio")) {
+                        System.out.println("Inside audio");
 
                         IAdaptationSet adSet = AdaptationSetHelper.getAudioAdaptationSets(period).get(0);
                         IRepresentation rep = adSet.getRepresentation().get(0);
@@ -67,6 +67,7 @@ public class TesterDownloader {
                         Files.createFile(f_out);
                         Files.write(f_out, IOUtils.toByteArray(in));
                     } else if(av.equals("video")) {
+                        System.out.println("Inside Video");
 
                         IAdaptationSet adSet = AdaptationSetHelper.getVideoAdaptationSets(period).get(0);
                         IRepresentation rep = adSet.getRepresentation().get(0);
